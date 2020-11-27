@@ -118,8 +118,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             let colorSpace = device.activeColorSpace
             DispatchQueue.main.async {
                 switch colorSpace {
-                case .sRGB: self.colorSpaceLabel.text = "Warning: Wide color not active"
-                case .P3_D65: self.colorSpaceLabel.text = "Wide color is active"
+                case .sRGB: self.colorSpaceLabel.text = "sRGB mode, warning, wide color not active"
+                case .P3_D65: self.colorSpaceLabel.text = "P3_D65 color is active"
+                case .HLG_BT2020: self.colorSpaceLabel.text = "HLG_BT2020 color is active"
+                    
                 }
             }
         }
